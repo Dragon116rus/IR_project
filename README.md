@@ -3,6 +3,7 @@
 ## How to run
 
 1) Download index from https://drive.google.com/open?id=1mUER-xSxItbWKEfywzuRUDZa8LFZt0qN
+2) Create dir for indexes: `mkdir docker/volumes -p`
 2) Put index files into docker/volumes (you need to put at least one index file)
 3) Build docker container 
 
