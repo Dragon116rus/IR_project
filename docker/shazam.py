@@ -12,6 +12,7 @@ import scipy.ndimage as ndimage
 
 sample_rate = 9000
 time_resolution = 0.005
+top_k = 10
 target = (
     int(sample_rate*time_resolution),
     int(10*sample_rate*time_resolution),
@@ -130,7 +131,7 @@ def predict(wav, index):
     scores, offsets = get_scores(index, request_index)
     scores = list(scores.items())
     scores.sort(key=lambda x: -x[1])
-    print(scores[:10])
+    print(scores[:top_k])
     result = []
     for name, score in scores:
         data = {"Name":name, "Score":score}
