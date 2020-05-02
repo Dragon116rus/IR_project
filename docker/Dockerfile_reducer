@@ -1,0 +1,9 @@
+FROM python:3
+
+WORKDIR /usr/src/app
+RUN mkdir volumes -p
+RUN pip install requests
+
+COPY reducer.py reducer.py
+
+CMD [ "python", "./reducer.py" ]
